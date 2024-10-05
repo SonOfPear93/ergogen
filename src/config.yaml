@@ -131,7 +131,7 @@ pcbs:
         where: true
         params:
           keycaps: true
-          reverse: false
+          reverse: true
           hotswap: true
           from: "{{column_net}}"
           to: "{{colrow}}"
@@ -144,9 +144,7 @@ pcbs:
         adjust:
           shift: [0, -5]
       nicenano:
-        what: nice_nano
-        params:
-          orientation: "up"
+        what: nice_nano_pretty
         where:
           ref: matrix_outer_num
           shift: [8, py+1]
@@ -163,7 +161,8 @@ pcbs:
           shift: [0.3px, 1.3py-1.5]
           rotate: -38
       trackball:
-        what: pimoroni_trackball
+        what: pimoroni_trackball_reversible_2
+        #what: pimoroni_trackball
         params:
           VCC: VCC
           SDA: P017
