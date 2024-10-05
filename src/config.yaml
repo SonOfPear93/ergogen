@@ -93,7 +93,7 @@ outlines:
         - ref: matrix_pinky_num
           shift: [0.5px,0.5py+22]
         - ref: matrix_bracket_home
-          shift: [0.5px,2.7py+5]
+          shift: [0.5px,2.7py+6.7]
         - ref: matrix_bracket_home
           shift: [0.5px,-0.5py]
         - ref: matrix_bracket_home
@@ -148,9 +148,6 @@ pcbs:
         where:
           ref: matrix_outer_num
           shift: [8, py+1]
-          #ref: matrix_bracket_home
-          #shift: [0.2px, 1.5py]
-          #rotate: -90
       reset:
         what: button
         params:
@@ -181,46 +178,23 @@ pcbs:
           ref: matrix_inner_num
           shift: [1.1px+3, 0.4py-0.7]
           rotate: -90
-      #scrollwheel:
-        #what: scrollwheel
-        #where:
-          #ref: matrix_index_bottom
-          #params:
-            #from: D7
-            #to: E6
-            #A: B4
-            #B: B5
-            #C: GND
-            #D: ''
-          #shift: [1px, 1py]
-          #rotate: -30
       holeTopLeft:
         what: mountinghole
         where:
-          ref: matrix_outer_num
-          shift: [0.5kx, -0.3ky]
+          ref: matrix_pinky_num
+          shift: [0.6kx, 1.6ky]
       holeBottomLeft:
         what: mountinghole
         where:
-          ref: matrix_outer_bottom
-          shift: [0.5kx, -0.3ky]
-      holeTopMiddle:
-        what: mountinghole
-        where:
-          ref: matrix_ring_num
-          shift: [0.7kx-0.8, 0.6ky]
-      holeBottomMiddle:
-        what: mountinghole
-        where:
-          ref: matrix_middle_bottom
-          shift: [0, -0.5ky-5]
+          ref: matrix_pinky_bottom
+          shift: [0.8kx, -0.2ky]
       holeTopRight:
         what: mountinghole
         where:
-          ref: matrix_inner_num
-          shift: [0, 0.8ky]
+          ref: matrix_bracket_home
+          shift: [0.5px-4,2.7py+2.7]
       holeBottomRight:
         what: mountinghole
         where:
           ref: matrix_bracket_home
-          shift: [0, -1ky]
+          shift: [0.5px-4, -1.5ky-0.3]
