@@ -161,8 +161,7 @@ pcbs:
           shift: [0.3px, 1.3py-1.5]
           rotate: -38
       trackball:
-        what: pimoroni_trackball_reversible_2
-        #what: pimoroni_trackball
+        what: pimoroni_trackball_reversible
         params:
           VCC: VCC
           SDA: P017
