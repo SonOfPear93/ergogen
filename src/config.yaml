@@ -121,7 +121,7 @@ outlines:
     - operation: subtract
       name: nnv2
 pcbs:
-  left:
+  board:
     outlines:
       main:
         outline: board
@@ -136,7 +136,7 @@ pcbs:
           from: "{{column_net}}"
           to: "{{colrow}}"
       diode:
-        what: diode
+        what: smd_diode
         where: true
         params:
           from: "{{colrow}}"
