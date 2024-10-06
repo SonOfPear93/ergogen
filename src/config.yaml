@@ -169,15 +169,13 @@ pcbs:
           shift: [-0.5px-1, -1.5py-2]
           rotate: 90
       battery:
-        what: jstph
+        what: jstph_no_silks
         params:
-          side: 'B'
           pos: RAW
           neg: GND
         where:
           ref: matrix_inner_num
-          shift: [1.1px+3, 0.4py-0.7]
-          rotate: -90
+          shift: [0, 1py]
       holeTopLeft:
         what: mountinghole
         where:
