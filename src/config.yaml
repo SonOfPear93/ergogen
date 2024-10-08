@@ -135,12 +135,22 @@ pcbs:
           hotswap: true
           from: "{{column_net}}"
           to: "{{colrow}}"
-      diode:
-        what: smd_diode
+      #diode:
+      #  what: smd_diode
+      #  where: true
+      #  params:
+      #    from: "{{colrow}}"
+      #    to: "{{row_net}}"
+      #  adjust:
+      #    shift: [0, -5]
+      led:
+        what: led
         where: true
         params:
-          from: "{{colrow}}"
-          to: "{{row_net}}"
+          VCC: VCC
+          din: P029
+          dout: P031
+          GND: GND
         adjust:
           shift: [0, -5]
       nicenano:
@@ -148,15 +158,15 @@ pcbs:
         where:
           ref: matrix_outer_num
           shift: [8, py+1]
-      reset:
-        what: button
-        params:
-          from: GND
-          to: RST
-        where:
-          ref: thumbfan_home_thumb
-          shift: [0.3px, 1.3py-1.5]
-          rotate: -38
+#      reset:
+#        what: button
+#        params:
+#          from: GND
+#          to: RST
+#        where:
+#          ref: thumbfan_home_thumb
+#          shift: [0.3px, 1.3py-1.5]
+#          rotate: -38
       trackball:
         what: pimoroni_trackball_reversible
         params:
