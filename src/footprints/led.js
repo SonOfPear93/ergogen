@@ -57,12 +57,13 @@ module.exports = {
             ))
 
           (pad "3" smd rect (at -0.85 -0.55 ${p.rot}) (size 0.8 0.8) (layers "F.Cu" "F.Paste" "F.Mask") ${p.din})
-          (pad "3" thru_hole circle (at -2.2 -1 ${p.rot}) (size 0.6 0.6) (drill 0.3) (layers *.Cu) (zone_connect 2) ${p.din})
+          (pad "3" thru_hole circle (at 0 1.5 ${p.rot}) (size 0.6 0.6) (drill 0.3) (layers *.Cu) (zone_connect 2) ${p.din})
           (pad "" smd custom (at -0.85 -0.55 ${p.rot}) (size 0.25 0.25) (layers F.Cu) ${p.din.str}
             (zone_connect 0)
             (options (clearance outline) (anchor circle))
             (primitives
-              (gr_line (start 0 0) (end -1.35 -0.45) (width 0.25))
+              (gr_line (start 0 0) (end 0.85 0) (width 0.25))
+              (gr_line (start 0.85 0) (end 0.85 2.05) (width 0.25))
             ))
 
           (fp_line (start -1.1 -1) (end -1.1 1) (layer B.SilkS) (width 0.1))
@@ -71,6 +72,12 @@ module.exports = {
           (fp_line (start 1.1 -1) (end -1.1 -1) (layer B.SilkS) (width 0.1))
 
           (pad "3" smd rect (at -0.85 0.55 ${p.rot}) (size 0.8 0.8) (layers "B.Cu" "B.Paste" "B.Mask") ${p.din})
+          (pad "" smd custom (at -0.85 0.55 ${p.rot}) (size 0.25 0.25) (layers B.Cu) ${p.GND.str}
+            (zone_connect 0)
+            (options (clearance outline) (anchor circle))
+            (primitives
+              (gr_line (start 0 0) (end 0.85 0.95) (width 0.25))
+            ))
 
           (pad "2" smd rect (at 0.85 0.55 ${p.rot}) (size 0.8 0.8) (layers "B.Cu" "B.Paste" "B.Mask") ${p.GND})
           (pad "" smd custom (at 0.85 0.55 ${p.rot}) (size 0.25 0.25) (layers B.Cu) ${p.GND.str}
