@@ -185,7 +185,7 @@ pcbs:
           neg: GND
         where:
           ref: matrix_inner_num
-          shift: [0, 1py]
+          shift: [0.8px, 1.1py]
       holeTopLeft:
         what: mountinghole
         where:
