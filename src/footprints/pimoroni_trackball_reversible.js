@@ -12,6 +12,10 @@ module.exports = {
       ${p.at /* parametric position */}
         (descr "Pimoroni I2C trackball breakout")
         (tags "Through hole pin header THT 1x05 2.54mm single row")
+    (fp_text reference "${p.ref}" (at -16.256 -0.254 ${p.rot + 90}) (layer F.SilkS) ${p.ref_hide}
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+
 
         (fp_line (start -1.5 -2.6) (end -1.5 12.5) (layer Dwgs.User) (width 0.12))
         (fp_line (start -1.5 12.5) (end 4.5 12.5) (layer Dwgs.User) (width 0.12))

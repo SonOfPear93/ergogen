@@ -11,6 +11,11 @@ module.exports = {
         (descr "JST PH series connector, S2B-PH-K, side entry type, through hole, Datasheet: http://www.jst-mfg.com/product/pdf/eng/ePH.pdf")
         (tags "connector jst ph")
 
+      (fp_text reference "${p.ref}" (at 0 -3.2) (layer "F.SilkS") ${p.ref_hide}
+        (effects (font (size 1 1) (thickness 0.15)))
+        (tstamp b68bb25c-687d-44b1-b966-dad4cac66b35)
+      )
+
         ${p.at /* parametric position */}
 
         (fp_line (start -2.25 0.25) (end -2.25 -1.35) (layer Dwgs.User) (width 0.15))

@@ -15,41 +15,41 @@ points:
         rotate: 5
       columns:
         outer:
-          key.column_net: P100
+          key.column_net: P022
         pinky:
-          key.column_net: P011
+          key.column_net: P024
         ring:
           key.splay: -5
           key.origin: [-0.75ky, -py]
           key.stagger: 0.75ky
-          key.column_net: P104
+          key.column_net: P002
         middle:
           key.splay: -5
           key.origin: [0, -ky]
           key.stagger: 0.25ky
-          key.column_net: P106
+          key.column_net: P115
         index:
           key.splay: 0
           key.stagger: -0.5ky
-          key.column_net: P111
+          key.column_net: P113
         inner:
           key.stagger: -0.25ky
-          key.column_net: P010
+          key.column_net: P111
         bracket:
           rows:
             num.skip: true
             top.skip: true
             bottom.skip: true
-          key.column_net: P009
+          key.column_net: P010
       rows:
         bottom:
-          row_net: P115
+          row_net: P106
         home:
-          row_net: P002
+          row_net: P104
         top:
-          row_net: P24
+          row_net: P011
         num:
-          row_net: P22
+          row_net: P100
     thumbfan:
       anchor:
         ref: matrix_inner_bottom
@@ -57,15 +57,15 @@ points:
       columns:
         near:
           key.splay: -28
-          key.column_net: P111
+          key.column_net: P010
         home:
           key.spread: 21.25
           key.splay: -10
           key.origin: [-11.75, -9]
-          key.column_net: P010
+          key.column_net: P009
       rows:
         thumb:
-          row_net: P113
+          row_net: P106
   rotate: 5
 outlines:
   raw:
@@ -143,14 +143,68 @@ pcbs:
       #    to: "{{row_net}}"
       #  adjust:
       #    shift: [0, -5]
+      #diode_grid:
+      #  what: diode_grid
+      #  where:
+      #    ref: matrix_inner_num
+      #    shift: [0.6px, 1.1py]
+      #  params:
+      #    rows: [
+      #        {
+      #          to: P100,
+      #          columns: [
+      #              P022,
+      #              P024,
+      #              P002,
+      #              P115,
+      #              P113,
+      #              P111
+      #            ]
+      #        },
+      #        {
+      #          to: P011,
+      #          columns: [
+      #              P022,
+      #              P024,
+      #              P002,
+      #              P115,
+      #              P113,
+      #              P111
+      #            ]
+      #        },
+      #        {
+      #          to: P104,
+      #          columns: [
+      #              P022,
+      #              P024,
+      #              P002,
+      #              P115,
+      #              P113,
+      #              P111,
+      #              P010
+      #            ]
+      #        },
+      #        {
+      #          to: P106,
+      #          columns: [
+      #              P022,
+      #              P024,
+      #              P002,
+      #              P115,
+      #              P113,
+      #              P111,
+      #              P010,
+      #              P009
+      #            ]
+      #        }
+      #      ]
       led:
-        what: led
+        what: led_sk6812mini
         where: true
         params:
-          VCC: VCC
-          din: P029
-          dout: P031
-          GND: GND
+          P4: P029
+          P2: P031
+          reversible: true
         adjust:
           shift: [0, -5]
       nicenano:
@@ -178,14 +232,14 @@ pcbs:
           ref: matrix_index_bottom
           shift: [-0.5px-1, -1.5py-2]
           rotate: 90
-      battery:
-        what: jstph_no_silks
-        params:
-          pos: RAW
-          neg: GND
-        where:
-          ref: matrix_inner_num
-          shift: [0.8px, 1.1py]
+      #battery:
+      #  what: jstph_no_silks
+      #  params:
+      #    pos: RAW
+      #    neg: GND
+      #  where:
+      #    ref: matrix_inner_num
+      #    shift: [0.8px, 1.1py]
       holeTopLeft:
         what: mountinghole
         where:
